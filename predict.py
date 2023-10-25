@@ -50,7 +50,7 @@ def print_predictions(filenames, predictions, signs):
     print()
     for file, prediction in enumerate(predictions):
         print(
-            f"{filenames[file]} is {signs[np.argmax(prediction)]['description']} sign with a confidence of {100 * np.max(prediction):.2f}%"
+            f"{filenames[file]} is {signs[np.argmax(prediction)]['description']} sign with a confidence of {np.max(prediction):.2%}"
         )
 
 
