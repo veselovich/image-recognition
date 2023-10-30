@@ -4,7 +4,7 @@ import numpy as np
 import os
 import sys
 import tensorflow as tf
-import learn
+import learn_tensor
 
 
 def main():
@@ -37,7 +37,7 @@ def load_data(directory):
 
     for file in sorted(os.listdir(directory)):
         image = cv2.imread(os.path.join(directory, file))
-        resized_image = cv2.resize(image, (learn.IMG_WIDTH, learn.IMG_HEIGHT))
+        resized_image = cv2.resize(image, (learn_tensor.IMG_WIDTH, learn_tensor.IMG_HEIGHT))
         images.append(resized_image / 255.0)
         filenames.append(file)
 
